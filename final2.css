@@ -1,0 +1,422 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+    min-width: 320px;
+}
+
+h2, h3{
+    font-variant: small-caps;
+    font-size: 2rem;
+    text-shadow: 1px 1px 5px #666;
+    font-weight: normal;
+    text-transform: lowercase;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+
+a:link, a:visited {
+    font-weight: normal;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, a:focus, a:active {
+    transition: color linear .07s;
+    color: #ccc;
+}
+
+
+#wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER AND NAV */
+
+#sidebar {
+    position: sticky;
+    background-color: white;
+    padding-bottom: 2em;
+    width: auto;
+    top: 0;
+    height: 6em;
+    border-bottom: 1px solid #ccc;
+    text-shadow: 1px 1px 5px #666;
+    box-shadow: 0 4px 4px #666;
+    font-size: 1.5rem;
+    z-index: 100;
+}
+
+header {
+    margin: 2em 4em 5em 4em;
+    position: relative;
+    top: 1.5em;
+    left: 0;
+    right: 0;
+    padding-top: .5em;
+}
+
+h1 {
+    font-size: 2rem;
+    font-variant: small-caps;
+    visibility: hidden;
+    margin: 5px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+
+h1:after {                              /*  Please dont fail me           */
+    content: "MDTC2111 final";          /*  I just wanted the f in final  */
+    visibility: visible;                /*  to be lowercase              */
+    border-right: 1px solid black;    
+    margin: 5px 12px;
+    position: absolute;
+    width: 5em;
+    left: 0;
+    padding-right: 1.5em;
+}
+
+header p {
+    position: absolute;
+    width: 7em;
+    left: 13em;
+}
+
+header nav {
+    position: absolute;
+    right: 0;
+    margin-top: 1em;
+}
+
+header nav ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+header li {
+    display: inline;
+    margin: 1.5em;
+}
+
+header nav a:link, a:visited {
+    font-weight: bold;
+}
+
+
+/* MAIN */
+
+#content {}
+
+main {
+    padding-top: 1.5em;
+    margin: 0 5em;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0 2px 10px #666;
+}
+
+section {
+    padding: 5em;
+}
+
+article {
+    margin-bottom: 10em;
+    padding: 1em;
+    box-shadow: 3px 12px 13px -13px #666;
+}
+
+
+
+
+/* BLOG */
+
+#blog {
+    text-align: justify;
+    border-right: 1px solid #ccc;
+    max-width: 40%;
+}
+
+#blog h2 {
+    display: none;
+}
+
+#blog h3 {
+    margin-left: -1em;
+}
+
+#blog br {
+    display: block;
+    content: "";
+    margin: 2em;
+}
+
+#blog .date {
+    display: block;
+    text-align: right;
+    font-size: 1.4rem;
+}
+
+
+
+
+/* PORTFOLIO */
+
+#portfolio {
+    margin-top: 1.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-weight: normal;
+    text-align: right;
+}
+
+
+
+.project {
+    border-radius: 6px 6px 1px 1px;
+    box-shadow: 0 2px 6px -4px #666;
+    overflow:hidden;
+    position: relative;
+    padding-top: 100px;
+    max-width: 560px;
+}
+
+.project img {
+    position: absolute;
+    box-shadow: 0 5px 5px -5px #666;
+    filter: grayscale(1) invert(1);
+
+    top: 0;
+    left: 0;
+
+    /* top: 0;
+    left: 0;
+    right: 0; */
+    /* filter: hue-rotate(.5turn) */
+}
+.project span {
+    font-style: italic;
+    border-bottom: 1px solid black;
+    margin-right: .5em;
+}
+
+.project summary {
+    margin-right: .5em;
+    margin-bottom: .5em;
+}
+
+.project a {
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.project a:hover {
+    color: initial;
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+    clear: both;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+
+footer ul {
+    width: 9em;
+    text-align: center;
+}
+
+footer li {
+    font-size: 1.4rem;
+    display: inline;
+}
+
+footer li{
+    border-bottom: 1px solid black;
+}
+footer li:last-of-type {
+    border-bottom: initial;
+}
+
+
+@media only screen and (max-width: 1300px){
+    #sidebar {
+        padding: 0 5vw;
+    }
+    header {
+        margin: 0;
+    }
+    header h1:after {
+        padding-right: 1em;
+    }
+    header p {
+        left: 10em;
+    }
+    header nav li {
+        margin: .5vw;
+
+    }
+    main {
+        flex-flow: column;
+    }
+    section {
+        padding: 0 1em 2em;
+        /* padding-bottom: 2em; */
+        box-shadow: unset;
+        /* margin-bottom: 2em; */
+        margin: 0 4em;
+        border-bottom: 1px solid #ccc;
+    }
+    section:last-of-type {
+        border-bottom: none;
+    }
+    #blog {
+        width: auto; max-width: unset;
+        border-right:none;
+    }
+    #blog h3 {
+        margin-left: initial;
+    }
+    #blog article {
+        margin: 0;
+    }
+    #portfolio {
+        display: initial;
+        width: auto;
+    }
+    .project {
+        width: auto;
+        margin-bottom: 80px;
+    }
+    .project img {/*
+        top: unset;
+        left: 0;
+        right: 0;
+        /* top: -100px; */
+        /* bottom: 55%; 
+        width: 100%; */
+        top: unset;
+        object-fit: cover;
+        bottom: 55%;
+        width: 100%;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    #sidebar {
+        padding: 0 1vw;
+        height: 4em;
+    }
+    header {
+        font-size: 1.3rem;
+        top: 0;
+    }
+    header h1 {
+        top: 0;
+        margin-left: 0;
+        font-size: 1.7rem;
+    }
+    header p {
+        /* display: none; */
+        width: 6em;
+        top: -.3em;
+        left: 9em;
+    }
+    .project img{
+        object-fit: cover;
+        top: 0;
+        height: 100px;
+    }
+    main {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #sidebar {
+        height: 3.5em;
+    }
+    header nav {
+        margin: 0;
+        margin-top:-.3em;
+        margin-right: 2vw;
+        text-align: right;
+    }
+    header nav ul {
+        /* width: 40%; */
+        margin: 0;
+        text-align: right;
+    }
+    header nav ul li {
+        display: block;
+        text-align: right;
+        margin: 0;
+    }
+    section {
+        margin: 0 3vw;
+    }
+    
+    footer {
+        padding: 1em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #sidebar {
+
+    }
+    header {
+
+    }
+    header h1 {
+        width: auto;
+    }
+    header h1:after {
+        content: 'MDTC 2111';
+        border: none;
+        width: auto; 
+        font-variant: normal;
+        margin-top: .8em;
+        text-align: left;
+        padding: 0;
+        margin-right: -.2em;
+        border-right: 1px solid black;
+    }
+    header p {
+        display: none; 
+    }
+    header nav {
+        margin-top: -.3em;
+        display: block;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    header nav ul {
+
+    }
+    /* header nav ul li {
+        display: block;
+    } */
+    article {
+        box-shadow: 0 12px 13px -13px #666;
+    }
+}
