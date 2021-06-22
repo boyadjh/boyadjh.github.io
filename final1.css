@@ -1,0 +1,305 @@
+* {
+    font-weight: normal;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: #cccccc;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#wrapper {
+    /* display: flex; */
+    position: relative;
+}
+
+
+/* SIDEBAR STYLES */
+
+#sidebar {
+    float: left;
+    position: fixed;
+    width: 200px;
+    left: 0;
+    top: 0;
+    border-right: 1px solid white;
+    height: 100%;
+}
+
+header {
+    margin: 10px;
+    text-align: right;
+}
+
+h1 {
+    text-align: right;
+}
+
+header p {
+    text-align: right;
+    text-transform: uppercase;
+}
+
+
+/* MAIN BODY STYLES */
+
+#content {
+    margin-left: 200px;
+}
+
+main {
+    margin: 100px auto;
+    max-width: 600px;
+}
+
+#blog article {
+    margin: 100px 0;
+    border-bottom: 5px dashed #221919;
+    text-align: justify;
+}
+
+#blog article:last-of-type {
+    border-bottom: none;
+}
+
+h1 {
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgb(71, 34, 34);
+    color: white;
+}
+
+h2 {
+    font-size: 5em;
+    text-shadow: 3px 3px rgb(71, 34, 34);
+    border-bottom: 1px solid white;
+    color: white;
+    text-transform: lowercase;
+}
+
+h3 {
+    font-size: 2em;
+    text-shadow: 2px 2px rgb(71, 22, 22);
+    text-align: right;
+    border-bottom: 1px solid gray;
+    color: white;
+    font-style: italic;
+}
+
+.project {
+    margin: auto;
+    margin-top: 30px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project summary {
+    position: absolute;
+    background-color: white;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    white-space: normal;
+}
+
+.project img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: auto;
+}
+
+.project span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #eee;
+    margin-left: 10px;
+    overflow: hidden;
+    font-size: 3em;
+}
+
+@media (hover:hover) {
+    .project span {
+        opacity: 0;
+        transition: all .3s;
+    }
+    .project img {
+        transition: all .1s;
+    }
+    .project summary {
+        opacity: 0;
+        transition: all .3s;
+    }
+    .project:hover span {
+        opacity: 1;
+    }
+    .project:hover img {
+        opacity: .5;
+        height: 120px;
+        width: auto;
+        top: -10%;
+        left: -10%;
+        /* top: -10px;
+        left: -20px; */
+    }
+    .project:hover summary {
+        opacity: 1;
+    }
+}
+
+
+/* FOOTER*/
+
+footer {
+    border-top: 1px solid #666666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer nav ul {
+    padding: 0;
+    display: flex;
+}
+
+footer nav ul li {
+    background-color: #221919;
+    padding: 5px;
+    border-right: 2px solid #ccc;
+}
+
+footer nav ul li:last-of-type {
+    border-right: none;
+}
+
+
+/* NAV */
+
+header nav {
+    font-size: 1.2em;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a:link,
+nav a:visited {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: red;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+    transition: color linear .07s;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    #wrapper {
+        margin: 100 0 0 0;
+        padding: 0;
+    }
+    #sidebar {
+        background-color: black;
+        float: unset;
+        position: sticky;
+        width: 100%;
+        left: unset;
+        border: unset;
+        border-bottom: 1px solid white;
+    }
+    header {
+        margin: 10px;
+        padding: 0;
+    }
+    h1 {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    header p {
+        display: block;
+        float: right;
+        margin: 0;
+    }
+    header nav {
+        text-align: left;
+        width: 50%;
+    }
+    header ul {
+        padding: 0;
+        margin: 0;
+    }
+    header li {
+        margin: 0;
+    }
+    #content {
+        margin: 20px;
+        padding: 0;
+    }
+    main {
+        margin: 0;
+        padding: 0;
+        max-width: unset;
+    }
+    h2 {
+        margin-top: 0;
+        display: block;
+        text-align: right;
+        font-size: 2em;
+        margin: 0;
+        text-shadow: unset;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 1px dashed #666;
+    }
+    #blog article {
+        margin: 40px 0;
+        padding-bottom: 10px;
+    }
+    #blog article:last-of-type {
+        border-bottom: 5px dashed #221919;
+    }
+    h3 {
+        border: none;
+        text-align: center;
+    }
+    .project {
+        position: relative;
+    }
+    .project summary {
+        display: none;
+    }
+    .project span {
+        position: absolute;
+        margin: 0;
+        font-size: 2em;
+        color: #221919;
+        font-style: italic;
+        background-color: rgba(255, 255, 255, .8);
+        top: unset;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 40px;
+    }
+    footer nav {
+        visibility: hidden;
+        height: 0;
+    }
+}
