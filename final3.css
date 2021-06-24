@@ -107,7 +107,7 @@ h3 {
     margin-bottom: 3em;
 }
 
-.project span, .project summary {
+.project span, .project .summary {
     display: block;
     margin: 0 0 0 .5em;
 }
@@ -126,7 +126,7 @@ h3 {
     border-bottom: 1px solid #666;
 }
 
-.project summary {
+.project .summary {
     text-align: right;
     font-size: 1.1rem;
     padding-right: .5em;

@@ -172,7 +172,7 @@ article {
     margin-top: 1.4em;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     font-weight: normal;
     text-align: right;
 }
@@ -195,11 +195,6 @@ article {
 
     top: 0;
     left: 0;
-
-    /* top: 0;
-    left: 0;
-    right: 0; */
-    /* filter: hue-rotate(.5turn) */
 }
 .project span {
     font-style: italic;
@@ -207,7 +202,7 @@ article {
     margin-right: .5em;
 }
 
-.project summary {
+.project .summary {
     margin-right: .5em;
     margin-bottom: .5em;
 }
@@ -296,8 +291,11 @@ footer li:last-of-type {
         margin: 0;
     }
     #portfolio {
-        display: initial;
+        display: flex;
         width: auto;
+    }
+    #portfolio h2{
+        margin-bottom: 20px;
     }
     .project {
         width: auto;

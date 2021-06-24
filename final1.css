@@ -13,6 +13,17 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    color: white;
+    font-style:normal;
+    font-weight: normal;
+    text-decoration: none;
+}
+
 #wrapper {
     /* display: flex; */
     position: relative;
@@ -101,7 +112,7 @@ h3 {
     position: relative;
 }
 
-.project summary {
+.project .summary {
     position: absolute;
     background-color: white;
     right: 0;
@@ -138,7 +149,7 @@ h3 {
     .project img {
         transition: all .1s;
     }
-    .project summary {
+    .project .summary {
         opacity: 0;
         transition: all .3s;
     }
@@ -154,7 +165,7 @@ h3 {
         /* top: -10px;
         left: -20px; */
     }
-    .project:hover summary {
+    .project:hover .summary {
         opacity: 1;
     }
 }
@@ -283,7 +294,7 @@ nav a:active {
     .project {
         position: relative;
     }
-    .project summary {
+    .project .summary {
         display: none;
     }
     .project span {
